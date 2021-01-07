@@ -23,6 +23,21 @@ Another important feature is adding extra food randomly that stay for certain ti
 On the Screen the user always can see snake score, size, and frames per second. 
 
 ## Rupric Points Achieved 
+In this project we could achieve several rupric points which are divided into to two categories.
+
+* General Rupric Points in the whole project:
+1. The project code is clearly organized into functions.
+2. The project accepts user input and processes the input.
+3. The project uses Object Oriented Programming techniques.
+4. Classes use appropriate access specifiers for class members. 
+5. Class constructors utilize member initialization lists.
+6. Classes encapsulate behavior.
+7. The project makes use of references in function declarations.
+
+* Specific Rupric Points in certain areas of the project:
+1. The project uses smart pointers instead of raw pointers. In `main` we used `shared_ptr` to the game object.  
+2. The project uses multithreading. In `Game` class, the function `Game::PlaceExtra()` at line 71 of `game.cpp` is executed in an independent thread. The thread is initiated in `Game::Run` function of `game.cpp` file at line 24. 
+3. A mutex or lock is used in the project. A mutex is defined in `game.h` and a `unique_lock` is used to protect the `food_extra` variable representing the extra food aded randomely. This is because the variale is accesses from different functions in `game.cpp`: `Game::Update()`, `Game::PlaceExtra()`.
 
 ## Dependencies for Running Locally
 * cmake >= 3.7
