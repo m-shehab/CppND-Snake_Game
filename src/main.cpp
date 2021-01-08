@@ -14,6 +14,8 @@ int main() {
   Renderer renderer(kScreenWidth, kScreenHeight, kGridWidth, kGridHeight);
   Controller controller;
   auto game = std::make_shared<Game>(kGridWidth, kGridHeight);
+  std::cout << "Press s button to start a new game. Press e button to end the game.\n";
+  std::cout << "Press p button to pause the game. Press r button to resume the game.\n";
   game->Run(controller, renderer, kMsPerFrame);
   std::cout << "Game has terminated successfully!\n";
   
